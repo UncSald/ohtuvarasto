@@ -3,13 +3,13 @@ of the Varasto class.
     """
 from varasto import Varasto
 
+def helper1(mehua, olutta):
+    """Helper funnction for main prints.
 
-def main():
-    """Main function for testing the Varasto class.
+    Args:
+        mehua (Varasto): Mehuvarasto
+        olutta (Varasto): Olutvarasto
     """
-    mehua = Varasto(100.0)
-    olutta = Varasto(100.0, 20.2)
-
     print("Luonnin jälkeen:")
     print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
@@ -27,6 +27,13 @@ def main():
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
 
+def helper2(mehua, olutta):
+    """Helper funnction for main prints.
+
+    Args:
+        mehua (Varasto): Mehuvarasto
+        olutta (Varasto): Olutvarasto
+    """
     print("Virhetilanteita:")
     print("Varasto(-100.0);")
     huono = Varasto(-100.0)
@@ -44,8 +51,15 @@ def main():
     print(f"Mehuvarasto: {mehua}")
     print("mehua.lisaa_varastoon(-666.0)")
     mehua.lisaa_varastoon(-666.0)
-    print(f"Mehuvarasto: {mehua}")
 
+def helper3(mehua, olutta):
+    """Helper funnction for main prints.
+
+    Args:
+        mehua (Varasto): Mehuvarasto
+        olutta (Varasto): Olutvarasto
+    """
+    print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
     print("olutta.ota_varastosta(1000.0)")
     saatiin = olutta.ota_varastosta(1000.0)
@@ -57,6 +71,18 @@ def main():
     saatiin = mehua.ota_varastosta(-32.9)
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
+
+def main():
+    """Main function for testing the Varasto class.
+    """
+    mehua = Varasto(100.0)
+    olutta = Varasto(100.0, 20.2)
+
+    helper1(mehua, olutta)
+
+    helper2(mehua,olutta)
+
+    helper3(mehua, olutta)
 
 
 if __name__ == "__main__":
