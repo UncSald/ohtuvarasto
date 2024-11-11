@@ -1,7 +1,12 @@
+"""Contains main function, which tests the functions
+of the Varasto class.
+    """
 from varasto import Varasto
 
 
 def main():
+    """Main function for testing the Varasto class.
+    """
     mehua = Varasto(100.0)
     olutta = Varasto(100.0, 20.2)
 
