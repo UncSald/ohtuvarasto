@@ -48,11 +48,13 @@ class Varasto:
         if maara < 0:
             return
         if maara <= self.paljonko_mahtuu():
-            if maara > 0:
-                if self.saldo:
-                    self.saldo = self.saldo + maara
+            self.saldo = self.saldo + maara
         else:
             self.saldo = self.tilavuus
+        if self.saldo:
+            if self.saldo >= 0:
+                if self.tilavuus:
+                    pass
 
     def ota_varastosta(self, maara):
         """Takes out given amount from the balance.
